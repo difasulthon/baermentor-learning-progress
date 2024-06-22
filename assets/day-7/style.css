@@ -1,0 +1,160 @@
+
+:root {
+  --primary-color-900: #4C1095; 
+  --primary-color-600: #7C3AED; 
+  --secondary-color-900: #2A4E51; 
+  --secondary-color-600: #1D85BE; 
+  --body-xl: 18px;
+  --body-lg: 16px;
+  --body-md: 14px;
+}
+
+@font-face {
+  font-family: "Darling";
+  src:
+    local("darling"),
+    url("./darling_3/Darling.ttf") format("truetype"),
+}
+
+
+/* BEM (Block Element Modifier) */
+/* Bloc */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color-900);
+  font-size: var(--body-lg);
+}
+
+.navbar {
+  background-color: var(--primary-color-900);
+}
+
+/* Element base on Bloc */
+.btn__login {
+  background-color: aqua;
+  border: 1px solid green;
+  font-size: 20px;
+}
+
+.btn__logout {
+  background-color: red;
+  border: 1px solid blue;
+  font-size: 20px;
+}
+
+.btn__send {
+  background-color: blue;
+  border: 1px solid blue;
+  font-size: 20px;
+}
+
+.hero__title {
+
+}
+
+.her-__image {
+
+}
+
+/* MOdifier */
+.btn--orange {
+  color: orange;
+}
+.btn--red {
+  color: red;
+}
+.btn--blue {}
+
+.hero--right {}
+.hero--left {}
+.hero--top {}
+
+/* Atomic */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.px-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.block {
+  display: block;
+}
+
+/* Penggabungan */
+.btn-send {
+
+}
+
+.hero-left {
+
+}
+
+.product {
+  background-color: aquamarine;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Penamaan CSS 
+  1. Snake-Case
+  2. Menggunakan huruf => box-2 => box-two
+  3. 
+*/
+
+/* vendor prefix */
+.grid {
+  /* penulisan vendor prefix untuk value baru */
+  display: grid;
+  display: -ms-grid;
+  display: -moz-grid;
+  display: -o-grid;
+
+  /* penulisan vendor prefix untuk property baru */
+  -moz-filter: blur();
+  -webkit-filter: grayscale();
+}
+
+h2 {
+  font-family: Darling;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    height: 500px;
+    width: 500px;
+    background-color: var(--primary-color-600);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    height: 100px;
+    width: 100px;
+    background-color: var(--primary-color-600);
+  }
+}
+
