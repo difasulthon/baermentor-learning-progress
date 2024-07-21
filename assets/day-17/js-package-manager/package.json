@@ -1,0 +1,21 @@
+{
+  "name": "js-package-manager",
+  "version": "1.0.0",
+  "description": "learn js package manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Difa Sulthon",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.12",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.6"
+  }
+}
