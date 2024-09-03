@@ -17,3 +17,7 @@ services:
     env_file:
       - path: .env
         required: true
+    volumes:
+      - hono-docker:/var/lib/postgres/data
+volumes:
+  hono-docker:

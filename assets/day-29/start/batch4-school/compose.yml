@@ -1,0 +1,29 @@
+services:
+  database:
+    image: postgres
+    ports:
+      - "5433:5432"
+    env_file:
+      - path: .env
+        required: true
+    volumes:
+      - batch4-school:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d postgres -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  core:
+    image: batch4-school
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3001"
+    depends_on:
+      database:
+        condition: service_healthy
+
+volumes:
+  batch4-school:
